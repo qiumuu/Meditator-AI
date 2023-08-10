@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta charset="UTF-8" name="viewport"
+        content="width=640,minimum-scale=0.5,maximum-scale=1.0,user-scalable=no, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.w3cbus.com/library/mdui/1.0.2/css/mdui.min.css" />
+    <script src="https://cdn.w3cbus.com/library/mdui/1.0.2/js/mdui.min.js"></script>
+
+    <link rel="shortcut icon" href="./pics/icon.png" type="image/x-icon">
+    <title>Meditator-AI</title>
+    <style>
+        img {
+            border: 3px solid rgb(46, 46, 46);
+        }
+
+        .drawer {
+            height: 200px;
+        }
+
+        .d {
+            border: 3px solid rgb(46, 46, 46);
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .loading-window {
+            width: 100%;
+            height: 100%;
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 1;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .container {
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .child {
+            width: 250px;
+            height: 100px;
+            background-color: #ffffff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mdui-center" style="height: 30px">
+
+    </div>
+    <div class="container">
+
+        <div class="child">
+            <div class="mdui-center" style="width: 300px">
+                <div class="mdui-typo-display-2-opacity">
+                    <img class="mdui-img-fluid" src="./pics/icon.png" width="200" />Meditator-AI
+                </div>
+                <div class="mdui-typo-body-2-opacity">&nbsp;做社科领域的ChatGPT</div>
+            </div>
+            <div class="mdui-center" style="height: 30px">
+
+            </div>
+            <button class="mdui-btn mdui-ripple mdui-btn-dense mdui-btn-raised"
+                onclick="location='https://www.zhihu.com/'">
+                <div class="mdui-typo-body-1-opacity">跟进项目进展</div>
+            </button>
+
+            <button class="mdui-btn mdui-ripple mdui-btn-dense mdui-btn-raised"
+                onclick="location='tencent://message/?uin=82954066&Site=Sambow&Menu=yes'">
+                <div class="mdui-typo-body-1-opacity">联系我们</div>
+            </button>
+
+            <button class="mdui-btn mdui-ripple mdui-btn-dense mdui-btn-raised"
+                onclick="location='https://www.zhihu.com/'">
+                <div class="mdui-typo-body-1-opacity">关于Meditator-AI
+                </div>
+            </button>
+
+        </div>
+    </div>
+    <div style="margin-left:300px;">
+
+
+    </div>
+    <div class="overlay">
+        <div class="loading-window">
+            <div class="loader"></div>
+        </div>
+    </div>
+    <script>
+        window.addEventListener('load', function () {
+            var overlay = document.querySelector('.overlay');
+            var loadingWindow = document.querySelector('.loading-window');
+
+            setTimeout(function () {
+                loadingWindow.style.opacity = '0';
+                setTimeout(function () {
+                    overlay.style.display = 'none';
+                }, 500);
+            }, 500);
+        });
+    </script>
+
+</body>
+
+</html>
