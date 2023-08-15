@@ -6,11 +6,75 @@
         content="width=640,minimum-scale=0.5,maximum-scale=1.0,user-scalable=no, initial-scale=1.0" />
     <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" />
     <script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script>
-
-
     <link rel="shortcut icon" href="./icon.png" type="image/x-icon">
     <title>Meditator-AI</title>
     <style>
+        .bg {
+            background: url();
+            height: 100%;
+            width: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .mdui-typo a {
+            color: #000000;
+            position: relative;
+            display: inline-block;
+            overflow: hidden;
+            text-decoration: none;
+            vertical-align: top;
+            outline: 0;
+        }
+
+        .mdui-typo a::before {
+            position: absolute;
+            top: auto;
+            bottom: 1px;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: #000000;
+            -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            -webkit-transition: all .2s;
+            transition: all .2s;
+            content: ' ';
+        }
+
+        .m2 {
+            background: #000;
+        }
+
+        .mdui-typow a {
+            color: #ffffff;
+            position: relative;
+            display: inline-block;
+            overflow: hidden;
+            text-decoration: none;
+            vertical-align: top;
+            outline: 0;
+        }
+
+        .mdui-typow a::before {
+            position: absolute;
+            top: auto;
+            bottom: 1px;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: #ffffff;
+            -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            -webkit-transition: all .2s;
+            transition: all .2s;
+            content: ' ';
+        }
+
         img {
             border: 3px solid rgb(46, 46, 46);
         }
@@ -71,62 +135,215 @@
 </head>
 
 <body>
-    <div class="mdui-center" style="height: 30px">
+    <div class="mdui-container">
 
-    </div>
-    <div class="container">
-
-        <div class="child">
-            <div class="mdui-center" style="width: 300px">
-                <div class="mdui-typo-display-2-opacity">
-                    <img class="mdui-img-fluid" src="./icon.png" width="200" />Meditator-AI
-                </div>
-                <div class="mdui-typo-body-2-opacity">&nbsp;做社科领域的ChatGPT</div>
+        <div class="overlay">
+            <div class="loading-window">
+                <div class="loader"></div>
             </div>
-            <div class="mdui-center" style="height: 30px">
-
-            </div>
-            <button class="mdui-btn mdui-ripple mdui-btn-dense mdui-btn-raised"
-                onclick="location='https://www.zhihu.com/'">
-                <div class="mdui-typo-body-1-opacity">跟进项目进展</div>
-            </button>
-
-            <button class="mdui-btn mdui-ripple mdui-btn-dense mdui-btn-raised"
-                onclick="location='tencent://message/?uin=82954066&Site=Sambow&Menu=yes'">
-                <div class="mdui-typo-body-1-opacity">联系我们</div>
-            </button>
-
-            <button class="mdui-btn mdui-ripple mdui-btn-dense mdui-btn-raised"
-                onclick="location='https://www.zhihu.com/'">
-                <div class="mdui-typo-body-1-opacity">关于Meditator-AI
-                </div>
-            </button>
-
         </div>
-    </div>
-    <div style="margin-left:300px;">
+        <script>
+            window.addEventListener('load', function () {
+                var overlay = document.querySelector('.overlay');
+                var loadingWindow = document.querySelector('.loading-window');
 
-
-    </div>
-    <div class="overlay">
-        <div class="loading-window">
-            <div class="loader"></div>
-        </div>
-    </div>
-    <script>
-        window.addEventListener('load', function () {
-            var overlay = document.querySelector('.overlay');
-            var loadingWindow = document.querySelector('.loading-window');
-
-            setTimeout(function () {
-                loadingWindow.style.opacity = '0';
                 setTimeout(function () {
-                    overlay.style.display = 'none';
+                    loadingWindow.style.opacity = '0';
+                    setTimeout(function () {
+                        overlay.style.display = 'none';
+                    }, 500);
                 }, 500);
-            }, 500);
-        });
-    </script>
+            });
+        </script>
+        <div>&nbsp;</div>
+        <div>&nbsp;</div>
+        <div>&nbsp;</div>
+        <div>&nbsp;</div>
+        <div class="mdui-container">
 
+            <div class="mdui-container">
+                <div class="mdui-container">
+                    <div class="mdui-panel-item mdui-panel-item-open bg">
+                        <div>&nbsp;</div>
+                        <div>&nbsp;</div>
+                        <div>&nbsp;</div>
+                        <div>&nbsp;</div>
+                        <div>&nbsp;</div>
+
+                        <div class="mdui-valign">
+                            <div class="mdui-center" style="width: 600px">
+                                <div class="mdui-typo-display-2-opacity">
+                                    <img class="mdui-img-fluid" src="./icon.png" width="200" />Meditator-AI
+                                </div>
+                                <div class="mdui-typo-body-2-opacity">&nbsp;做社科领域的ChatGPT</div>
+
+                            </div>
+                        </div>
+                        <div class="mdui-center" style="height: 30px">
+
+                        </div>
+                        <div class="mdui-container">
+                            <div class="mdui-container">
+                                <div class="mdui-container">
+
+                                    <button class="mdui-btn mdui-ripple mdui-btn-dense mdui-btn-raised"
+                                        onclick="location=''">
+                                        <div class="mdui-typo-body-1-opacity">跟进项目进展</div>
+                                    </button>
+
+                                    <button class="mdui-btn mdui-ripple mdui-btn-dense mdui-btn-raised"
+                                        onclick="location='tencent://message/?uin=82954066&Site=Sambow&Menu=yes'">
+                                        <div class="mdui-typo-body-1-opacity">联系我们</div>
+                                    </button>
+
+                                    <button class="mdui-btn mdui-ripple mdui-btn-dense mdui-btn-raised"
+                                        onclick="location=''">
+                                        <div class="mdui-typo-body-1-opacity">关于Meditator-AI
+                                        </div>
+                                    </button>
+                                    <div class="mdui-center" style="height: 50px">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+    </div>
+    </div>
+
+    <div class="mdui-container">
+        <div class="mdui-container">
+            <div class="mdui-container">
+                <div class="mdui-container">
+                    <div class="mdui-panel-item mdui-panel-item-open m2 mdui-typow">
+                        <div class="mdui-container">
+                            <div class="mdui-typo">
+                                <div>&nbsp;</div>
+                                <div class="mdui-container">
+                                    <div class="" style="width: 700px">
+
+                                        <div class="mdui-typo-body-2 mdui-text-color-white-text">
+                                            <h5>合作方/友情链接</h5>
+                                            <a href="">Cloudflare 中国</a>&nbsp;
+                                            <a href="">Gitee码云</a>&nbsp;
+                                            <a href="">GitHub</a>&nbsp;
+                                            <a href="">清华大学·智谱AI</a>&nbsp;
+                                            <a href="">飞桨PaddlePaddle</a>&nbsp;
+                                            <a href="">ChatGLM</a>&nbsp;
+                                            <a href="">HuggingFace</a>&nbsp;
+                                            <a href="">ChatGLM</a>&nbsp;
+                                            <a href="">ChatGLM</a>&nbsp;
+
+                                            <a href="http://viyrs.com/">维米帆龄Gi会社</a>&nbsp;
+                                            <a href="https://www.lihouse.xyz/">青柠博客</a>&nbsp;
+                                            <a href="https://tobylai.tk">Toby_lai</a>&nbsp;
+                                            <a href="https://www.hi-qiuqiu.top/">球球博客</a>&nbsp;
+                                            <a href="https://www.tutime.cn/">土土博客</a>&nbsp;
+                                            <a href="https://www.yamatu.top/">yamatublog</a>&nbsp;
+                                            <a href="https://www.uwpg.xyz/">魂酱的博客</a>&nbsp;
+                                            <a href="https://josephz.top/">Иосиф Чжан的博客</a>&nbsp;
+                                            <a href="https://mmyyll.ml/">Muyulong's Blog</a>&nbsp;
+                                            <a href="https://weiyeblog.com/home">Weiye's Blog</a>&nbsp;
+                                            <a href="https://xiangda.ink/">Xiangda's Blog</a>&nbsp;
+                                            <a href="https://www.timissl.cn/">小猪のBlog</a>&nbsp;
+                                            <a href="https://hi-xiaobao.com/">小宝</a>&nbsp;
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div>&nbsp;</div>
+
+                            </div>
+                            <div>&nbsp;</div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <div>&nbsp;</div>
+
+    <div class="mdui-container-fluid ">
+        <div class="mdui-center" style="width: 430px">&nbsp;&nbsp;&nbsp;
+            <a aria-current="page" href="https://www.cloudflare-cn.com/" class="lh-0 flex-0 main-header-logo"
+                style="min-width:120px;min-height:40px"><svg xmlns="http://www.w3.org/2000/svg" width="204" height="30"
+                    fill="none" viewBox="0 0 204 30" style="width:100px;height:30px">
+                    <g clip-path="url(#a)">
+                        <path fill="#FBAD41"
+                            d="M52.688 13.028c-.22 0-.437.008-.654.015a.297.297 0 0 0-.102.024.365.365 0 0 0-.236.255l-.93 3.249c-.401 1.397-.252 2.687.422 3.634.618.876 1.646 1.39 2.894 1.45l5.045.306c.15.008.28.08.359.199a.492.492 0 0 1 .051.434.64.64 0 0 1-.547.426l-5.242.306c-2.848.132-5.912 2.456-6.987 5.29l-.378 1a.28.28 0 0 0 .248.382h18.054a.48.48 0 0 0 .464-.35 13.12 13.12 0 0 0 .48-3.54c0-7.22-5.789-13.072-12.933-13.072">
+                        </path>
+                        <path fill="#000"
+                            d="M85.519 18.886h2.99v8.249h5.218v2.647h-8.208V18.886ZM96.819 24.365v-.032c0-3.13 2.493-5.665 5.821-5.665 3.327 0 5.789 2.508 5.789 5.633v.032c0 3.129-2.493 5.665-5.821 5.665s-5.79-2.505-5.79-5.633Zm8.562 0v-.032c0-1.573-1.123-2.942-2.773-2.942-1.65 0-2.725 1.337-2.725 2.91v.032c0 1.572 1.122 2.942 2.757 2.942 1.634 0 2.741-1.338 2.741-2.91ZM112.086 25.003V18.89h3.033v6.055c0 1.572.783 2.317 1.985 2.317 1.201 0 1.985-.717 1.985-2.242v-6.134h3.032v6.039c0 3.519-1.985 5.056-5.049 5.056s-4.99-1.573-4.99-4.98M126.694 18.889h4.159c3.848 0 6.081 2.241 6.081 5.382v.032c0 3.14-2.265 5.477-6.144 5.477h-4.096V18.886v.004Zm4.202 8.216c1.788 0 2.97-.995 2.97-2.754v-.032c0-1.744-1.185-2.755-2.97-2.755h-1.217v5.541h1.217ZM141.277 18.886h8.621v2.648h-5.636v1.85h5.096v2.505h-5.096v3.893h-2.985V18.886ZM154.054 18.886h2.989v8.249h5.219v2.647h-8.208V18.886ZM170.067 18.809h2.878l4.589 10.971h-3.202l-.788-1.946h-4.159l-.768 1.946h-3.143l4.589-10.971h.004Zm2.619 6.676-1.202-3.097-1.217 3.097h2.419ZM181.383 18.889h5.096c1.647 0 2.789.438 3.509 1.182.635.621.954 1.465.954 2.536v.032c0 1.664-.879 2.77-2.218 3.344l2.572 3.797h-3.45l-2.17-3.3h-1.308v3.3h-2.989V18.886l.004.004Zm4.959 5.23c1.016 0 1.602-.497 1.602-1.29v-.031c0-.856-.614-1.29-1.618-1.29h-1.954v2.616h1.973l-.003-.004ZM195.253 18.886h8.669v2.568h-5.711v1.648h5.175v2.384h-5.175v1.728h5.79v2.568h-8.748V18.886ZM78.976 25.642c-.418.956-1.3 1.633-2.47 1.633-1.63 0-2.756-1.37-2.756-2.942V24.3c0-1.573 1.094-2.91 2.725-2.91 1.229 0 2.166.764 2.564 1.807h3.147c-.505-2.591-2.757-4.53-5.683-4.53-3.324 0-5.821 2.536-5.821 5.665v.032c0 3.129 2.461 5.633 5.79 5.633 2.843 0 5.068-1.864 5.655-4.36h-3.155l.004.004Z">
+                        </path>
+                        <path fill="#F6821F"
+                            d="m44.808 29.578.334-1.175c.402-1.397.253-2.687-.42-3.634-.62-.876-1.647-1.39-2.896-1.45l-23.665-.306a.467.467 0 0 1-.374-.199.492.492 0 0 1-.052-.434.64.64 0 0 1 .552-.426l23.886-.306c2.836-.131 5.9-2.456 6.975-5.29l1.362-3.6a.914.914 0 0 0 .04-.477C48.998 5.259 42.79 0 35.368 0c-6.842 0-12.647 4.462-14.73 10.665a6.92 6.92 0 0 0-4.911-1.374c-3.28.33-5.92 3.002-6.246 6.318a7.148 7.148 0 0 0 .18 2.472c-5.36.16-9.66 4.598-9.66 10.052 0 .493.035.979.106 1.453a.46.46 0 0 0 .457.402h43.704a.57.57 0 0 0 .54-.418">
+                        </path>
+                    </g>
+                    <defs>
+                        <clipPath id="a">
+                            <path fill="#fff" d="M0 0h204v30H0z"></path>
+                        </clipPath>
+                    </defs>
+                </svg></a>
+            <a href="https://github.com/about"><img width="90px" height="20px" class="entered exited"
+                    src="https://github.githubassets.com/images/modules/site/icons/footer/github-logo.svg"></a>
+            <a href="https://vercel.com/home"><svg role="img" aria-label="Vercel Inc." height="18" viewBox="0 0 283 64"
+                    fill="var(--geist-foreground)">
+                    <path
+                        d="M37 0l37 64H0L37 0zM159.6 34c0-10.3-7.6-17.5-18.5-17.5s-18.5 7.2-18.5 17.5c0 10.1 8.2 17.5 19.5 17.5 6.2 0 11.8-2.3 15.4-6.5l-6.8-3.9c-2.1 2.1-5.2 3.4-8.6 3.4-5 0-9.3-2.7-10.8-6.8l-.3-.7h28.3c.2-1 .3-2 .3-3zm-28.7-3l.2-.6c1.3-4.3 5.1-6.9 9.9-6.9 4.9 0 8.6 2.6 9.9 6.9l.2.6h-20.2zM267.3 34c0-10.3-7.6-17.5-18.5-17.5s-18.5 7.2-18.5 17.5c0 10.1 8.2 17.5 19.5 17.5 6.2 0 11.8-2.3 15.4-6.5l-6.8-3.9c-2.1 2.1-5.2 3.4-8.6 3.4-5 0-9.3-2.7-10.8-6.8l-.3-.7H267c.2-1 .3-2 .3-3zm-28.7-3l.2-.6c1.3-4.3 5.1-6.9 9.9-6.9 4.9 0 8.6 2.6 9.9 6.9l.2.6h-20.2zM219.3 28.3l6.8-3.9c-3.2-5-8.9-7.8-15.8-7.8-10.9 0-18.5 7.2-18.5 17.5s7.6 17.5 18.5 17.5c6.9 0 12.6-2.8 15.8-7.8l-6.8-3.9c-1.8 3-5 4.7-9 4.7-6.3 0-10.5-4.2-10.5-10.5s4.2-10.5 10.5-10.5c3.9 0 7.2 1.7 9 4.7zM282.3 5.6h-8v45h8v-45zM128.5 5.6h-9.2L101.7 36 84.1 5.6h-9.3L101.7 52l26.8-46.4zM185.1 25.8c.9 0 1.8.1 2.7.3v-8.5c-6.8.2-13.2 4-13.2 8.7v-8.7h-8v33h8V36.3c0-6.2 4.3-10.5 10.5-10.5z">
+                    </path>
+                </svg></a> &nbsp;
+            <a href="https://gitee.com/"><img width="85px" height="20px" class="entered exited"
+                    src="https://gitee.com/static/images/logo-black.svg?t=158106664"></a>
+            <div class="mdui-typo-caption-opacity">&nbsp;</div>
+        </div>
+    </div>
+    <div class="mdui-container-fluid ">
+        <div class="mdui-center" style="width: 430px">
+            <div class="mdui-typo-body-2 mdui-typo">Copyright © 2023 Meditator-AI All Rights Reserved.
+                <a mdui-dialog="{target: '#100'} ">声明</a>
+
+                <div class="mdui-dialog " id="100">
+                    <div class="mdui-dialog-title">声明
+                    </div>
+                    <div class="mdui-dialog-content">
+                        <div class="mdui-typo-caption mdui-typo ">
+                            根据<a rel="license " href="http://creativecommons.org/licenses/by/4.0/ ">知识共享署名 4.0
+                                国际许可协议</a>进行许可。
+                        </div>
+                        <div class="mdui-typo-caption mdui-typo ">备案?备你🐴
+                        </div>
+                    </div>
+                    <div class="mdui-dialog-actions ">
+                        <button class="mdui-btn mdui-ripple mdui-color-black " mdui-dialog-close>确定</button>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+            <div class="mdui-typo-caption-opacity ">&nbsp;</div>
+            <div class="mdui-typo-caption-opacity ">&nbsp;</div>
+
+        </div>
+    </div>
+    </div>
+    </div>
 </body>
 
 </html>
